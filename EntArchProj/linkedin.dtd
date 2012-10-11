@@ -1,0 +1,91 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT job-search (jobs,num-results,facets)>
+<!ATTLIST job-search
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT jobs (job)+>
+<!ATTLIST jobs
+  xmlns CDATA #FIXED ''
+  count CDATA #REQUIRED
+  start CDATA #REQUIRED
+  total CDATA #REQUIRED>
+
+<!ELEMENT num-results (#PCDATA)>
+<!ATTLIST num-results
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT facets (facet)>
+<!ATTLIST facets
+  xmlns CDATA #FIXED ''
+  total CDATA #REQUIRED>
+
+<!ELEMENT job (id,company,salary?,job-poster,description-snippet,
+               location-description)>
+<!ATTLIST job
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT facet (code,name,buckets)>
+<!ATTLIST facet
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT company (id,name)>
+<!ATTLIST company
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT salary (#PCDATA)>
+<!ATTLIST salary
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT job-poster (id,first-name,last-name,headline)>
+<!ATTLIST job-poster
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT description-snippet (#PCDATA)>
+<!ATTLIST description-snippet
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT location-description (#PCDATA)>
+<!ATTLIST location-description
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT buckets (bucket)+>
+<!ATTLIST buckets
+  xmlns CDATA #FIXED ''
+  total CDATA #REQUIRED>
+
+<!ELEMENT first-name (#PCDATA)>
+<!ATTLIST first-name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT last-name (#PCDATA)>
+<!ATTLIST last-name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT headline (#PCDATA)>
+<!ATTLIST headline
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT bucket (code,name,count,selected)>
+<!ATTLIST bucket
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT count (#PCDATA)>
+<!ATTLIST count
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT selected (#PCDATA)>
+<!ATTLIST selected
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT id (#PCDATA)>
+<!ATTLIST id
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT code (#PCDATA)>
+<!ATTLIST code
+  xmlns CDATA #FIXED ''>
